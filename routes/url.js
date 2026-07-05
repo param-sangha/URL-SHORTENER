@@ -1,9 +1,10 @@
 const express = require("express");
+const router = express.Router();
+const URL = require("../models/url");
 const {
   handleGenerateURL,
   handleGenerateAnalytics,
 } = require("../controllers/url");
-const router = express.Router();
 
 router.post("/", handleGenerateURL);
 
